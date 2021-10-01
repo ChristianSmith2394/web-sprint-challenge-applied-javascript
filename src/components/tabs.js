@@ -36,6 +36,8 @@ const Tabs = (topics) => {
   return tabTopics;
 }
 
+import axios from "axios";
+
 const tabsAppender = (selector) => {
   // TASK 4
   // ---------------------
@@ -45,6 +47,8 @@ const tabsAppender = (selector) => {
   // Append the tabs to the element in the DOM that matches the selector passed to the function.
   //
   
-}
+  
+  }
+
 
 export { Tabs, tabsAppender }
