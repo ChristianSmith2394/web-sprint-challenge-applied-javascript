@@ -34,11 +34,17 @@ const Card = (article) => {
   headline.classList.add('headline')
   author.classList.add('author')
   imgContainer.classList.add('img-container')
+  img.setAttribute('src', article.authorPhoto)
 
   headline.textContent = article.headline
-  img.textContent = article.authorPhoto 
+  img.textContent = article.authorPhoto
   authorName.textContent = article.authorName
 
+  card.addEventListener('click', event => {
+    console.log(headline)
+  })
+
+  return card
 }
 
 const cardAppender = (selector) => {
