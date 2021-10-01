@@ -13,33 +13,42 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
-  const tabTopics = document.createElement('div')
-  tabTopics.classList.add('topics')
-  for (const topic of topics){
-    const tab = document.createElement('div')
-    tab.classList.add('tab')
-    tab.textContent = `${topic}`
-    tabTopics.appendChild(tab)
-  }
+  // const tabTopics = document.createElement('div')
+  // tabTopics.classList.add('topics')
+  
+  // for (const topic of topics){
+  //   const tab = document.createElement('div')
+  //   tab.classList.add('tab')
+  //   tab.textContent = `${topic}`
+  //   tabTopics.appendChild(tab)
+  // }
 
 
-  // const tabTopics = document.createElement('div');
-  // const tab = document.createElement('div');
-  // const tab = document.createElement('div');
-  // const tab = document.createElement('div');
+  const tabTopics = document.createElement('div');
+  const tab1 = document.createElement('div');
+  const tab2 = document.createElement('div');
+  const tab3 = document.createElement('div');
+  const tab4 = document.createElement('div')
+  const tab5 = document.createElement('div')
 
-  // tabTopics.classList.add('topics');
-  // tab.classList.add('tab');
-  // tab.classList.add('tab');
-  // tab.classList.add('tab');
+  tabTopics.classList.add('topics');
+  tab1.classList.add('tab');
+  tab2.classList.add('tab');
+  tab3.classList.add('tab');
+  tab4.classList.add('tab')
+  tab5.classList.add('tab')
 
-  // tabTopics.appendChild(tab);
-  // tabTopics.appendChild(tab);
-  // tabTopics.appendChild(tab);
+  tabTopics.appendChild(tab1);
+  tabTopics.appendChild(tab2);
+  tabTopics.appendChild(tab3);
+  tabTopics.appendChild(tab4)
+  tabTopics.appendChild(tab5)
 
-  // tab.textContent = `${topics}`;
-  // tab.textContent = `${topics}`;
-  // tab.textContent = `${topics}`;
+  tab1.textContent = `${topics[0]}`;
+  tab2.textContent = `${topics[1]}`;
+  tab3.textContent = `${topics[2]}`;
+  tab4.textContent = `${topics[3]}`
+  tab5.textContent = `${topics[4]}`
 
 
   return tabTopics;

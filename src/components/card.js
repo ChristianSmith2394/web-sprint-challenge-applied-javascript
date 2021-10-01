@@ -43,7 +43,7 @@ const Card = (article) => {
   card.addEventListener('click', event => {
     console.log(headline)
   })
-
+  
   return card
 }
 
@@ -63,10 +63,10 @@ const cardAppender = (selector) => {
 
       const response = resp.data
 
-      document.querySelector(selector).append(Card(response.article));
+      document.querySelector(selector).append(Card(response.card));
 
 
-      console.log(resp);
+     return response
 
     })
 }
