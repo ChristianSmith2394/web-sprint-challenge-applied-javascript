@@ -11,6 +11,24 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
+  const header = document.createElement('div')
+  const time = document.createElement('span')
+  const cardTitle = document.createElement('h1')
+  const temperature = document.createElement('span')
+
+  header.appendChild(time)
+  header.appendChild(cardTitle)
+  header.appendChild(temperature)
+
+  header.classList.add('header')
+  time.classList.add('date')
+  temperature.classList.add('temp')
+
+  time.textContent = date
+  cardTitle.textContent = title
+  temperature.textContent = temp
+
+  return header
 }
 
 const headerAppender = (selector) => {
