@@ -69,6 +69,8 @@ const tabsAppender = (selector) => {
 
       const response = resp.data
 
+      console.log("topics", response.topics)
+
       document.querySelector(selector).append(Tabs(response.topics));
 
 

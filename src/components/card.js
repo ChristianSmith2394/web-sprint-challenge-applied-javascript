@@ -17,6 +17,8 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
+
+  console.log("ARTICLE: ", article)
   const card = document.createElement('div')
   const headline = document.createElement('div')
   const author = document.createElement('div')
@@ -62,11 +64,20 @@ const cardAppender = (selector) => {
     .then(resp => { 
 
       const response = resp.data
+      const articles = response.articles
 
-      document.querySelector(selector).append(Card(response.card));
+      const articleKeys = Object.keys(articles)
+
+      articleKeys.forEach(key => {
+        const _a = articles[key]
+        _a.forEach(article => {
+          document.querySelector(selector).append(Card(article));
+        })
+      })
 
 
-     return response
+
+     return resp
 
     })
 }
